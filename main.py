@@ -70,7 +70,7 @@ def main():
 
 
         # player decides to stand
-        if((player_total < 21) ):
+        if(player_total < 21):
             while dealer.get_total() < 16:
                 print("*" * 40)
                 dealer.show_cards()
