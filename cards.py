@@ -18,6 +18,11 @@ class Deck():
         for suit in suits:
             for value in range(1,14):
                 self.card_number += 1
-                self.cards[self.card_number] = Card(value, suit)
+                if value == 11 or value == 12 or value == 13:
+                    self.cards[self.card_number] = Card(10, suit)
+                else:
+                    self.cards[self.card_number] = Card(value, suit)
 
-# {1: {1:"spades"}}
+# deck = Deck()
+# for key, value in deck.cards.items():
+#     print(deck.cards[key].get_card())
